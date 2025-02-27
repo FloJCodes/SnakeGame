@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Food.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Snake.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Food.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Snake.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -132,17 +143,6 @@
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-network.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\DefendGame\DefendGame\Food.cpp" />
-    <ClCompile Include="..\..\DefendGame\DefendGame\Game.cpp" />
-    <ClCompile Include="..\..\DefendGame\DefendGame\main.cpp" />
-    <ClCompile Include="..\..\DefendGame\DefendGame\Snake.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\DefendGame\DefendGame\Food.h" />
-    <ClInclude Include="..\..\DefendGame\DefendGame\Game.h" />
-    <ClInclude Include="..\..\DefendGame\DefendGame\Snake.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

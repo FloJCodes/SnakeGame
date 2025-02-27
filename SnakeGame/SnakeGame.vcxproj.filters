@@ -15,27 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\DefendGame\DefendGame\Game.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\DefendGame\DefendGame\Snake.cpp">
+    <ClCompile Include="Game.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\DefendGame\DefendGame\Food.cpp">
+    <ClCompile Include="Snake.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\DefendGame\DefendGame\main.cpp">
+    <ClCompile Include="Food.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\DefendGame\DefendGame\Game.h">
+    <ClInclude Include="Game.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\DefendGame\DefendGame\Snake.h">
+    <ClInclude Include="Snake.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\DefendGame\DefendGame\Food.h">
+    <ClInclude Include="Food.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
