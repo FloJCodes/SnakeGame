@@ -8,7 +8,7 @@ You can control the snake to eat random spawning food to get bigger. You die if 
 - **Visual Studio**: Version 2022 or higher.
 - **Operating System**: Windows (tested on Windows 10).
 
-The Repository already contains all necessary builds (Debug and Release) and projectproperties. The Project can be immediately opened and executed after cloning it to VS.
+The Repository already contains all necessary builds (Debug and Release) and project properties. The Project can be immediately opened and executed after cloning it to VS.
 
 
 ## Instructions
