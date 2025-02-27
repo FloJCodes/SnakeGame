@@ -33,6 +33,9 @@ private:
 	sf::Clock clock;
 	float moveInterval;
 	std::vector<BodyPart> board;
+	sf::SoundBuffer eatSoundBuffer;
+	sf::Sound eatSound;
+	
 
 	//Private functions
 	void initVariables();

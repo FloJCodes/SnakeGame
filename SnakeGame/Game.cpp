@@ -3,6 +3,7 @@
 const int WIDTH = 600;
 const int HEIGHT = 600;
 const int GRID_SIZE = 30;
+sf::SoundBuffer s;
 
 //Private functions
 void Game::initVariables()
@@ -30,6 +31,14 @@ Game::Game()
 {
 	this->initVariables();
 	this->initWindow();
+
+	if (!eatSoundBuffer.loadFromFile("EatSound.ogg")) {
+		std::cerr << "Fehler beim Laden des Sounds!" << std::endl;
+	}
+
+	// Setze den SoundBuffer und konfiguriere den Sound
+	eatSound.setBuffer(eatSoundBuffer);
+	eatSound.setVolume(100);
 }
 
 Game::~Game()
@@ -90,6 +99,8 @@ void Game::update()
 
 			if (snake.getHeadX() == food.getFoodX() && snake.getHeadY() == food.getFoodY())
 			{
+				eatSound.play();
+
 				snake.extend();
 
 				board = {};
