@@ -130,12 +130,12 @@ void Game::update()
 	}
 
 	//End game conditions
-	/*
+	
 	if (snake.getHeadX() <= 0 || snake.getHeadX() >= WIDTH / GRID_SIZE || snake.getHeadY() <= 0 || snake.getHeadY() >= HEIGHT / GRID_SIZE)
 	{
 		this->endGame = true;
 	}
-
+	/*
 	const auto parts = snake.getParts();
 	for (size_t i = 1; i < parts.size(); i++)
 	{
