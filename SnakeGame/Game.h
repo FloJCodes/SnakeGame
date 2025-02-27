@@ -32,6 +32,7 @@ private:
 	Food food;
 	sf::Clock clock;
 	float moveInterval;
+	std::vector<BodyPart> board;
 
 	//Private functions
 	void initVariables();

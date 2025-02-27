@@ -74,7 +74,8 @@ void Game::update()
 		Updates the game and all its parts and ends it if needed.
 		-Moves the snake if the time has hit the moveInterval
 		-Extends the snake if the head has hit food
-		-Spawns new food the cant be inside the current snake
+		-Modifies the board vector so it only contains fields with no snake in it
+		-Places new food in one of those fields
 		-Sets endGame to true if the snake hits a corner or itself
 	*/
 
@@ -91,30 +92,33 @@ void Game::update()
 			{
 				snake.extend();
 
-				std::vector<int>xCoords;
-				std::vector<int>yCoords;
-
-				for (const auto& part : snake.getParts()) {
-					xCoords.push_back(part.x);
-					yCoords.push_back(part.y);
+				board = {};
+				for (int i = 1; i <= WIDTH / GRID_SIZE - 1; ++i) {
+					for (int j = 1; j <= HEIGHT / GRID_SIZE - 1; ++j) {
+						board.push_back({ i, j });
+					}
 				}
 
-				int newFoodX = rand() % WIDTH / GRID_SIZE;
-				int newFoodY = rand() % WIDTH / GRID_SIZE;
-
-				while (std::find(xCoords.begin(), xCoords.end(), newFoodX) == xCoords.end() &&
-					std::find(yCoords.begin(), yCoords.end(), newFoodY) == yCoords.end())
+				std::vector<BodyPart> parts = snake.getParts();
+				
+				for (int i = 0; i < parts.size(); i++)
 				{
-					newFoodX = rand() % WIDTH / GRID_SIZE;
-					newFoodY = rand() % WIDTH / GRID_SIZE;
+					for (int j = 0; j < board.size(); j++)
+					{
+						if (board[j].x == parts[i].x && board[j].y == parts[i].y)
+							board.erase(board.begin() + j);
+					}
 				}
-				food.spawn(newFoodX, newFoodY);
+
+				int index = rand() % board.size();
+				food.spawn(board[index].x, board[index].y);
 			}
 			clock.restart();
 		}
 	}
 
 	//End game conditions
+	/*
 	if (snake.getHeadX() <= 0 || snake.getHeadX() >= WIDTH / GRID_SIZE || snake.getHeadY() <= 0 || snake.getHeadY() >= HEIGHT / GRID_SIZE)
 	{
 		this->endGame = true;
@@ -126,6 +130,7 @@ void Game::update()
 		if (snake.getHeadX() == parts[i].x && snake.getHeadY() == parts[i].y)
 			this->endGame = true;
 	}
+	*/
 }
 
 void Game::render()

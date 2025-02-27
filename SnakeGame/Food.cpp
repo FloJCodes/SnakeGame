@@ -5,9 +5,6 @@
 //Constructors / Destructors
 Food::Food()
 {
-	//Initializing rand()
-	std::srand(static_cast<unsigned>(time(NULL)));
-
 	//Initializing Variables
 	foodX = 10;
 	foodY = 5;

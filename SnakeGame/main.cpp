@@ -3,6 +3,8 @@
 
 int main()
 {
+    std::srand(static_cast<unsigned>(time(NULL)));
+
     //Init Game engine
     Game game;
 
