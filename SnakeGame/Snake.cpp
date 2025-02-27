@@ -32,8 +32,6 @@ void Snake::move()
 		newHead.y++;
 	parts.insert(parts.begin(), newHead);
 	parts.pop_back();
-
-	std::cout << "X: " << newHead.x << " Y: " << newHead.y << "\n";
 }
 
 void Snake::extend()

@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cstdlib>
+#include <ctime>
+
 #include <SFML/Graphics.hpp>
 
 class Food

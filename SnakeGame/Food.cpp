@@ -1,6 +1,4 @@
 #include "Food.h"
-#include <cstdlib>
-#include <ctime>
 
 //Constructors / Destructors
 Food::Food()

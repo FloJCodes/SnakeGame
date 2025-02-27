@@ -32,11 +32,11 @@ Game::Game()
 	this->initVariables();
 	this->initWindow();
 
+	//Initializing Eat Sound
 	if (!eatSoundBuffer.loadFromFile("EatSound.ogg")) {
 		std::cerr << "Fehler beim Laden des Sounds!" << std::endl;
 	}
 
-	// Setze den SoundBuffer und konfiguriere den Sound
 	eatSound.setBuffer(eatSoundBuffer);
 	eatSound.setVolume(100);
 }
@@ -83,6 +83,7 @@ void Game::update()
 		Updates the game and all its parts and ends it if needed.
 		-Moves the snake if the time has hit the moveInterval
 		-Extends the snake if the head has hit food
+		-Plays Eat Sound
 		-Modifies the board vector so it only contains fields with no snake in it
 		-Places new food in one of those fields
 		-Sets endGame to true if the snake hits a corner or itself
@@ -99,9 +100,9 @@ void Game::update()
 
 			if (snake.getHeadX() == food.getFoodX() && snake.getHeadY() == food.getFoodY())
 			{
-				eatSound.play();
-
 				snake.extend();
+
+				eatSound.play();
 
 				board = {};
 				for (int i = 1; i <= WIDTH / GRID_SIZE - 1; ++i) {
