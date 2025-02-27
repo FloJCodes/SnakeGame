@@ -13,7 +13,7 @@ The Repository already contains all necessary builds (Debug and Release) and pro
 
 ## Instructions
 Due to a problem with SFML (Explained in ## Known Problems) there are two different builds in x64/Debug and x64/Release. 
-The Debug buils contains a bug which causes the snake to completely turn around if two inputs are pressed too fast after another. 
+The Debug build contains a bug which causes the snake to completely turn around if two inputs are pressed fast enough after each other. 
 This turn is forbidden and causes a loss of the game. To prevent that and have more fun with the game I recommend playing the Release build. 
 It only contains the "endGame condition" for wall collisions. This build allows the snake to pass through itself (which is much more snake-like if you ask me :) )
 In either of the builds you control the snake with WASD or the Arrow-Keys.
@@ -22,9 +22,9 @@ In either of the builds you control the snake with WASD or the Arrow-Keys.
 ## Project structure
 - main.cpp calls the Game class and runs the main loop
 - the Game class acts as the Game engine
-- it initializes, updates and renders the Window and the necessary Variables
-- it also handles all incoming events
-- the Snake class contains the parts vector which represents the snake and all functions related to it
+  - it initializes, updates and renders the Window and the necessary Variables
+  - it also handles all incoming events
+- the Snake class contains the "parts" vector which represents the snake and all functions related to it
 - the Food class contains the coordinates of the current food as well as the spawn function for new food
 
 
@@ -35,9 +35,9 @@ before the snake had made the first move in the "UP" or "DOWN" direction. The in
 
 
 ## Third Party Services
-Basic structure of main.cpp and Game class is from a Tutorial series by https://www.youtube.com/@SurajSharmaFourKnob.
-The complete rebuilt tutorial game is in my GitHub aswell: https://github.com/FloJCodes/DefendGame.git
-I rebuilt the tutorial game to snake with the a bit of help by AI for problem solving.
+The basic structure of main.cpp and Game class is from a Tutorial series by https://www.youtube.com/@SurajSharmaFourKnob.
+The complete rebuilt tutorial game is in my GitHub aswell: https://github.com/FloJCodes/DefendGame.git.
+I rebuilt the tutorial game to snake with a bit of help from AI for problem solving.
 
-##Contact
+## Contact
 You can contact me via email: flojcodes@gmail.com
