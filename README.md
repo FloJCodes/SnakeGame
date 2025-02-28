@@ -5,7 +5,6 @@ Warum diese beiden Dateien unterschiedlich sind, habe ich weiter unten erklärt.
 Im Ordner SnakeGame-master/SnakeGame gibt es auch einen x64-Ordner mit den beiden Unterordnern Debug und Release.
 Darin sind allerdings nicht die richtigen Builds, sondern nur die .exe-recipes.
 Um die Builds auszuführen musst du noch in den Eigenschaften unter Allgemein unter Sicherheit den Haken setzen.
-![Sicherheit_SnakeGame](https://github.com/user-attachments/assets/d016f294-4c8e-4f14-9365-236fc9e1a5c7)
 
 Du kannst zur Not das Repository (https://github.com/FloJCodes/SnakeGame.git) auch in Visual Studio klonen und es dort ausführen. Die Projekteinstellungen sollten alle stimmen.
 
