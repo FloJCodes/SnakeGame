@@ -9,6 +9,7 @@ Um die Builds auszuführen musst du noch in den Eigenschaften unter Allgemein un
 Du kannst zur Not das Repository (https://github.com/FloJCodes/SnakeGame.git) auch in Visual Studio klonen und es dort ausführen. Die Projekteinstellungen sollten alle stimmen.
 
 Viel Spaß :)
+
 Flo
 
 
